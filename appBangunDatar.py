@@ -19,4 +19,25 @@ if menu == 'Luas Persegi':
 
 elif menu == "Luas Segitiga":
     st.write(':blue[ini halaman untuk menghitung Luas Segitiga]:balloon::balloon:')
-    st.image('https://www.doyanblog.com/wp-content/uploads/2023/06/rumus-luas-segitiga-sama-sisi.jpg', caption=gambar segitiga)
+    st.image('https://www.doyanblog.com/wp-content/uploads/2023/06/rumus-luas-segitiga-sama-sisi.jpg', caption='gambar segitiga')
+    def Luassegitiga(a, t):
+        return 0.5*a*t
+    alas = st.number_input('masukan alas segitiga', min_value=0)
+    tinggi = st.number_input('masukan tinggi segitiga', min_value=0)
+    sisi_miring = st.number_input('masukan sisi miring segitiga', min_value=0)
+    
+    if st.button('hitung'):
+        luas = Luassegitiga(alas, tinggi)
+        st.write(f'Luas segitiga adalah {luas}')
+
+elif menu == "Luas Lingkaran":
+    st.write(':blue[ini halaman untuk menghitung luas lingkaran]:balloon::balloon:')
+    st.image('https://www.doyanblog.com/wp-content/uploads/2023/06/rumus-luas-lingkaran.jpg', caption='gambar lingkaran')
+    def luaslingkaran(r):
+        return 3.14*r*r
+    jari_jari = st.number_input('masukan jari-jari lingkaran', min_value=0)
+
+    if st.button('hitung'):
+        luas = luaslingkaran(jari_jari)
+        st.write(f'luas lingkaran adalah {luas}')
+

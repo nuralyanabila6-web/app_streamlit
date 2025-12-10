@@ -4,7 +4,7 @@ import streamlit as st
 st.title('aplikasi perhitungan luas bangun datar')
 st.header('ini buatan anak SI')
 
-menu = st.sidebar.selectbox('pilih aplikasi', ['Luas Persegi', 'Luas Segitiga', 'Luas Lingkaran', 'Luas Jajar Genjang'])
+menu = st.sidebar.selectbox('pilih aplikasi', ['Luas Persegi', 'Luas Segitiga', 'Luas Lingkaran', 'Luas Persegi Panjang'])
 
 if menu == 'Luas Persegi':
     st.write(':blue[ini halaman untuk menghitung Luas Persegi]:balloon::balloon:')

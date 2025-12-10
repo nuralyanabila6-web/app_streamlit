@@ -4,7 +4,7 @@ import streamlit as st
 st.title('aplikasi perhitungan luas bangun datar')
 st.header('ini buatan anak SI')
 
-menu = st.sidebar.selectbox('pilih aplikasi', ['Luas Persegi', 'Luas Segitiga', 'Luas Lingkaran'])
+menu = st.sidebar.selectbox('pilih aplikasi', ['Luas Persegi', 'Luas Segitiga', 'Luas Lingkaran', 'Luas Jajar Genjang'])
 
 if menu == 'Luas Persegi':
     st.write(':blue[ini halaman untuk menghitung Luas Persegi]:balloon::balloon:')
@@ -40,4 +40,16 @@ elif menu == "Luas Lingkaran":
     if st.button('hitung'):
         luas = luaslingkaran(jari_jari)
         st.write(f'luas lingkaran adalah {luas}')
+
+elif menu == "Luas Persegi Panjang":
+    st.write(':blue[ini halaman untuk menghitung Luas Persegi Panjang]:balloon::balloon:')
+    st.image('https://www.doyanblog.com/wp-content/uploads/2023/05/rumus-luas-persegi-panjang.jpg.webp', caption='gambar persegi panjang')
+    def luaspersegipanjang(p, l):
+        return p*l
+    panjang = st.number_input('masukan panjang persegi panjang', min_value=0)
+    lebar = st.number_input('masukan lebar persegi panjang', min_value=0)
+
+    if st.button('hitung'):
+        luas = luaspersegipanjang(panjang, lebar)
+        st.write(f'luas persegi panjang adalah {luas}')
 
